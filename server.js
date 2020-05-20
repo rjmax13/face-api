@@ -35,9 +35,7 @@ app.use(bodyParser.json());
 app.use(cors())
 
 // --> res = this is working
-app.get('/', (req, res) =>{
-  res.send(database.users);
-})
+app.get('/', (req, res) =>{ res.send('it is working!') })
 // signin API--> POST success/fail
 app.post('/signin', signin.handleSignin(db, bcrypt))
 // register API --> POST = user
