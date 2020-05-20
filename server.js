@@ -11,6 +11,8 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+//not secure for use in production, and to only use for local development 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 //function to connect the database
 const db = knex({
